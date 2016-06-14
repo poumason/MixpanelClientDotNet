@@ -51,7 +51,7 @@ namespace Mixpanel.Net.UniversalApp
             timer.Start();
         }
 
-        private async void Timer_Tick(object sender, object e)
+        private void Timer_Tick(object sender, object e)
         {
             timer.Stop();
             client.TrackEvent(new EventData()

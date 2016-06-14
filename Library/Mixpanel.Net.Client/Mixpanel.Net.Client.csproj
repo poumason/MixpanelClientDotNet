@@ -37,6 +37,8 @@
     <Compile Include="MixpanelClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceModel\Model\EventData.cs" />
+    <Compile Include="ServiceModel\Parameter\EventParameter.cs" />
+    <Compile Include="ServiceModel\Parameter\IParameter.cs" />
     <Compile Include="ServiceModel\Services\HttpService.cs" />
     <Compile Include="Utility\NetworkHelper.cs" />
   </ItemGroup>
