@@ -29,7 +29,4 @@ tracker.TrackEvent(eventData);
 
 ### Licence
 
-[Licenced under the Apache 2.0 licence](https://github.com/poumason/Mixpanel.Net.Client/blob/master/licence.txt)
-
-
-https://github.com/poumason/Mixpanel.Net.Client/blob/master/license.txt
+[Licenced under the Apache 2.0 licence](https://github.com/poumason/Mixpanel.Net.Client/blob/master/license.txt)
