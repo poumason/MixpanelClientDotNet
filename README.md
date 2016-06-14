@@ -26,3 +26,10 @@ eventData.SetProperty("key2", "name");
 eventData.SetProperty("ket3", true);
 tracker.TrackEvent(eventData);
 ```
+
+### Licence
+
+[Licenced under the Apache 2.0 licence](https://github.com/poumason/Mixpanel.Net.Client/blob/master/licence.txt)
+
+
+https://github.com/poumason/Mixpanel.Net.Client/blob/master/license.txt
