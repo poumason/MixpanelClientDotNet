@@ -1,4 +1,4 @@
-﻿using Mixpanel.Net.Client.ServiceModel;
+﻿using Mixpanel.Net.Client.SDK.ServiceModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,20 +6,15 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mixpanel.Net.Client
+namespace Mixpanel.Net.Client.SDK
 {
     public class MixpanelClient
     {
-        public string Token { get; set; }
+        private string Token { get; set; }
 
         const string trackUri = "https://api.mixpanel.com/track";
 
         private HttpService httpService;
-
-        public MixpanelClient()
-        {
-            httpService = new HttpService();
-        }
 
         public MixpanelClient(string token)
         {
@@ -27,6 +22,10 @@ namespace Mixpanel.Net.Client
             httpService = new HttpService();
         }
 
+        /// <summary>
+        /// Track event.
+        /// </summary>
+        /// <param name="eventitem">EventData</param>
         public void TrackEvent(EventData eventitem)
         {
             eventitem.SetToken(Token);

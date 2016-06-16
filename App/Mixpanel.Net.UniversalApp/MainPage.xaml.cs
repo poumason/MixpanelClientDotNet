@@ -1,5 +1,5 @@
-﻿using Mixpanel.Net.Client;
-using Mixpanel.Net.Client.ServiceModel;
+﻿using Mixpanel.Net.Client.SDK;
+using Mixpanel.Net.Client.SDK.ServiceModel;
 using System;
 using System.Collections.Generic;
 using System.IO;

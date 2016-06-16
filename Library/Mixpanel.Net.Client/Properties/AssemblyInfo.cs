@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Mixpanel.Net.Client")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Mixpanel.Net.Client.SDK")]
+[assembly: AssemblyDescription("Integration Mixpanel track event for Windows Universal Apps and WPF.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("KKBOX")]
-[assembly: AssemblyProduct("Mixpanel.Net.Client")]
-[assembly: AssemblyCopyright("Copyright © KKBOX 2016")]
+[assembly: AssemblyCompany("Pou")]
+[assembly: AssemblyProduct("Mixpanel.Net.Client.SDK")]
+[assembly: AssemblyCopyright("Copyright © Pou 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: NeutralResourcesLanguage("en")]
@@ -26,5 +26,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.0.0.1")]
+[assembly: AssemblyFileVersion("1.0.0.1")]

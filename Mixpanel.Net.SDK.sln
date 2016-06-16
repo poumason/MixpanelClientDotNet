@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{A44A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mixpanel.Net.UniversalApp", "App\Mixpanel.Net.UniversalApp\Mixpanel.Net.UniversalApp.csproj", "{FB93FBF0-EF1B-490E-B2B7-B164583CF808}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mixpanel.Net.Client", "Library\Mixpanel.Net.Client\Mixpanel.Net.Client.csproj", "{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mixpanel.Net.Client.SDK", "Library\Mixpanel.Net.Client\Mixpanel.Net.Client.SDK.csproj", "{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mixpanel.Net.WPF", "App\Mixpanel.Net.WPF\Mixpanel.Net.WPF.csproj", "{4F1E9E18-A565-42BD-9FEE-077D4FE48A3E}"
 EndProject

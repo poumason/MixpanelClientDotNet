@@ -104,7 +104,6 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="Mixpanel.Net.UniversalApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Default.rd.xml" />
@@ -127,9 +126,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Library\Mixpanel.Net.Client\Mixpanel.Net.Client.csproj">
+    <ProjectReference Include="..\..\Library\Mixpanel.Net.Client\Mixpanel.Net.Client.SDK.csproj">
       <Project>{96765ffa-1f88-4b82-a30c-4fdf1b38cc49}</Project>
-      <Name>Mixpanel.Net.Client</Name>
+      <Name>Mixpanel.Net.Client.SDK</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

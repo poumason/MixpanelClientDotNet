@@ -1,4 +1,4 @@
-﻿namespace Mixpanel.Net.Client.Utility
+﻿namespace Mixpanel.Net.Client.SDK.Utility
 {
     public class NetworkHelper
     {

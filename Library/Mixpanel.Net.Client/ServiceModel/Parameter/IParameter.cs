@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mixpanel.Net.Client.ServiceModel
+namespace Mixpanel.Net.Client.SDK.ServiceModel
 {
     interface IParameter
     {
