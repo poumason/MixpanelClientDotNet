@@ -24,7 +24,7 @@ namespace Mixpanel.Net.Client.Universal
             Application.Current.Suspending += Current_Suspending;
         }
 
-        protected override Task<bool> IdentifyNetworkAvaiable()
+        protected override async Task<bool> IdentifyNetworkAvaiable()
         {
             return NetworkHelper.IsNetworkAvailable;
         }
