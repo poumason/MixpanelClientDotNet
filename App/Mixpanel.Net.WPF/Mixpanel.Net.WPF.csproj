@@ -95,12 +95,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Library\Mixpanel.Net.Client\Mixpanel.Net.Client.SDK.csproj">
-      <Project>{96765ffa-1f88-4b82-a30c-4fdf1b38cc49}</Project>
-      <Name>Mixpanel.Net.Client.SDK</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

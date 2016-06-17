@@ -1,19 +1,5 @@
-﻿using Mixpanel.Net.Client.SDK;
-using Mixpanel.Net.Client.SDK.ServiceModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 
 namespace Mixpanel.Net.WPF
@@ -23,7 +9,7 @@ namespace Mixpanel.Net.WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        private MixpanelClient client;
+        //private MixpanelClient client;
 
         private DispatcherTimer timer;
 
@@ -34,7 +20,7 @@ namespace Mixpanel.Net.WPF
             Unloaded += MainWindow_Unloaded;
 
             // get mixpanel project token
-            client = new MixpanelClient("");
+            //client = new MixpanelClient("");
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -58,10 +44,10 @@ namespace Mixpanel.Net.WPF
         private void Timer_Tick(object sender, object e)
         {
             timer.Stop();
-            client.TrackEvent(new EventData()
-            {
-                Name = "test_wpf"
-            });
+            //client.TrackEvent(new EventData()
+            //{
+            //    Name = "test_wpf"
+            //});
             timer.Start();
         }
     }

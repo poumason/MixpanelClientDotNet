@@ -34,13 +34,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="MixpanelClient.cs" />
+    <Compile Include="IMixpanelClient.cs" />
+    <Compile Include="AbsMixpanelClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceModel\Model\EventData.cs" />
+    <Compile Include="ServiceModel\Model\EventDataCollection.cs" />
     <Compile Include="ServiceModel\Parameter\EventParameter.cs" />
     <Compile Include="ServiceModel\Parameter\IParameter.cs" />
     <Compile Include="ServiceModel\Services\HttpService.cs" />
-    <Compile Include="Utility\NetworkHelper.cs" />
+    <Compile Include="Utility\CommonDefine.cs" />
+    <Compile Include="Utility\StringExtension.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
