@@ -1,17 +1,13 @@
 ﻿using Mixpanel.Net.Client.SDK;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Mixpanel.Net.Client.SDK.ServiceModel;
 using Mixpanel.Net.Client.Universal.Utility;
 using Windows.UI.Xaml;
 using Windows.Storage;
 using Mixpanel.Net.Client.Universal.IO;
-using Windows.Storage.Streams;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Newtonsoft.Json;
+using Mixpanel.Net.Client.SDK.Utility;
 
 namespace Mixpanel.Net.Client.Universal
 {
@@ -24,14 +20,9 @@ namespace Mixpanel.Net.Client.Universal
             Application.Current.Suspending += Current_Suspending;
         }
 
-        protected override async Task<bool> IdentifyNetworkAvaiable()
+        protected override Task<bool> IdentifyNetworkAvaiable()
         {
-            return NetworkHelper.IsNetworkAvailable;
-        }
-
-        protected override Task WriteEventToTemp(EventData data)
-        {
-            return base.WriteEventToTemp(data);
+            return Task.FromResult(NetworkHelper.IsNetworkAvailable);
         }
 
         private async void Current_Suspending(object sender, Windows.ApplicationModel.SuspendingEventArgs e)
@@ -44,8 +35,12 @@ namespace Mixpanel.Net.Client.Universal
 
         protected override async Task<bool> Save()
         {
+            EventDataCollection collectionItem = null;
             var tempJson = await ReadFile();
-            var collectionItem = JsonConvert.DeserializeObject<EventDataCollection>(tempJson);
+            if (!string.IsNullOrEmpty(tempJson))
+            {
+                collectionItem = JsonConvert.DeserializeObject<EventDataCollection>(tempJson);
+            }
             if (collectionItem == null)
             {
                 collectionItem = new EventDataCollection();
@@ -65,7 +60,10 @@ namespace Mixpanel.Net.Client.Universal
             var tempFile = await GetMixpanelTempFile();
             try
             {
-                content = await FileIO.ReadTextAsync(tempFile);
+                if (tempFile != null)
+                {
+                    content = await FileIO.ReadTextAsync(tempFile);
+                }
             }
             catch (UnauthorizedAccessException)
             {
@@ -91,7 +89,7 @@ namespace Mixpanel.Net.Client.Universal
             }
             catch (Exception ex)
             {
-
+                DebugLogger.Write(ex);
             }
 
             return true;

@@ -8,19 +8,17 @@ namespace Mixpanel.Net.Client.SDK
 {
     public abstract class AbsMixpanelClient : IMixpanelClient
     {
-        protected string apiKey;
+        protected List<EventData> TempEventCollection { get; private set; }
 
-        protected List<EventData> TempEventCollection { get; set; }
+        protected Timer looptimer { get; private set; }
 
-        protected Timer looptimer;
-
-        protected string Token { get; set; }
+        protected string Token { get; private set; }
 
         private HttpService httpService;
 
         public AbsMixpanelClient(string token)
         {
-            apiKey = token;
+            Token = token;
             httpService = new HttpService();
             TempEventCollection = new List<EventData>();
         }
@@ -55,7 +53,7 @@ namespace Mixpanel.Net.Client.SDK
         /// <param name="eventitem">EventData</param>
         public async void TrackEvent(EventData eventitem)
         {
-            eventitem.SetToken(apiKey);
+            eventitem.SetToken(Token);
             string queryString = $"data={eventitem.ToBase64()}";
             if (await IdentifyNetworkAvaiable())
             {
@@ -64,7 +62,6 @@ namespace Mixpanel.Net.Client.SDK
             else
             {
                 TempEventCollection.Add(eventitem);
-                //await WriteEventToTemp(eventitem);
             }
         }
 
@@ -73,24 +70,14 @@ namespace Mixpanel.Net.Client.SDK
             throw new NotImplementedException();
         }
 
-        protected virtual Task<bool> IdentifyNetworkAvaiable()
-        {
-            throw new NotImplementedException();
-        }
-
-        protected virtual Task WriteEventToTemp(EventData data)
-        {
-            throw new NotImplementedException();
-        }
-
+        
         public Task<bool> SaveMixpanelTempData()
         {
             return Save();
         }
 
-        protected virtual Task<bool> Save()
-        {
-            throw new NotImplementedException();
-        }
+        protected abstract Task<bool> Save();
+
+        protected abstract Task<bool> IdentifyNetworkAvaiable();
     }
 }

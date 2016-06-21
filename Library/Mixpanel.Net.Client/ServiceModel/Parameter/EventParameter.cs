@@ -8,7 +8,6 @@ namespace Mixpanel.Net.Client.SDK.ServiceModel
 {
     public class EventParameter: IParameter
     {
-
         public string ToQueryString()
         {
             return string.Empty;
