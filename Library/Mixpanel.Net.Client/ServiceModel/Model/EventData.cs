@@ -85,9 +85,9 @@ namespace Mixpanel.Net.Client.SDK.ServiceModel
         /// <para>This is used for adding geolocation data to events, and should only be required if you are making requests from your backend.</para>
         /// <para> If "ip" is absent (and ip=1 is not provided as a URL parameter), Mixpanel will ignore the IP address of the request. </para>
         /// </summary>
-        public void SetIp()
+        public void SetIp(string ip)
         {
-            SetProperty("ip", NetworkHelper.GetIpAddress());
+            SetProperty("ip", ip);
         }
 
         public void ClearProperties()
@@ -98,9 +98,7 @@ namespace Mixpanel.Net.Client.SDK.ServiceModel
         public string ToBase64()
         {
             string json = JsonConvert.SerializeObject(this);
-            byte[] data = UTF8Encoding.UTF8.GetBytes(json);
-            string base64 = Convert.ToBase64String(data);
-            return base64;
-        }
+            return json.ToBase64();
+        }      
     }
 }
