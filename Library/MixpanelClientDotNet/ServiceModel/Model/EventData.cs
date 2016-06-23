@@ -29,6 +29,11 @@ namespace MixpanelDotNet.ServiceModel
             Properties.Add("time", DateTime.UtcNow.Ticks);
         }
 
+        public EventData(string name) : this()
+        {
+            Name = name;
+        }
+
         public object GetProperty(string key)
         {
             if (Properties.ContainsKey(key))
