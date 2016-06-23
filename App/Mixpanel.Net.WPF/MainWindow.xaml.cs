@@ -1,5 +1,5 @@
-﻿using Mixpanel.Net.Client.SDK.ServiceModel;
-using Mixpanel.Net.Client.WPF;
+﻿using MixpanelClientDotNet.WPF;
+using MixpanelDotNet.ServiceModel;
 using System;
 using System.Windows;
 using System.Windows.Threading;
@@ -51,6 +51,11 @@ namespace Mixpanel.Net.WPF
                 Name = "test_wpf"
             });
             timer.Start();
+        }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            await client.SaveMixpanelTempData();
         }
     }
 }
