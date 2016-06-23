@@ -11,13 +11,17 @@ Supported Platform : UWP, .NET(4.5.1)
 
 ### Usage:
 
-Step 1. new the MixpanelClient instance.
+Step 1. install nuget:
+* UWP: https://www.nuget.org/packages/MixpanelDotNet.UWP/
+* WPF: https://www.nuget.org/packages/MixpanelClientDotNet.WPF
+
+Step 2. new the MixpanelClient instance.
 
 ```csharp
-var tracker = new MixpanelClient("your API token");
+IMixpanelClient tracker = new MixpanelClient("your API token");
 ```
 
-Step 2. new the EventData, and set properties.
+Step 3. new the EventData, and set properties.
 
 ```csharp
 var eventData = new EventData("event name");
