@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("MixpanelClientDotNet.WPF")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("This project provides basic API integration for using Mixpanel from .NET applications.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Pou")]
 [assembly: AssemblyProduct("MixpanelClientDotNet.WPF")]
