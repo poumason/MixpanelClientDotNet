@@ -3,7 +3,7 @@
 This project provides basic API integration for using Mixpanel from .NET
 applications.  
 
-Support Windows Universal Platform, WPF.
+Supported Platform : UWP, .NET(4.5.1)
 
 ### Current Features:
 
