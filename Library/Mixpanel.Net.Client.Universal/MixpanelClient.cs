@@ -8,6 +8,7 @@ using Windows.Storage;
 using Mixpanel.Net.Client.Universal.IO;
 using Newtonsoft.Json;
 using Mixpanel.Net.Client.SDK.Utility;
+using System.Collections.Generic;
 
 namespace Mixpanel.Net.Client.Universal
 {
@@ -105,5 +106,11 @@ namespace Mixpanel.Net.Client.Universal
             return tempFile;
         }
         #endregion
+
+
+        public override Task<bool> ImportEvents(List<EventData> eventList)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -44,6 +44,7 @@
     <Compile Include="ServiceModel\Services\HttpService.cs" />
     <Compile Include="Utility\CommonDefine.cs" />
     <Compile Include="Utility\DebugLogger.cs" />
+    <Compile Include="Utility\INetworkHelper.cs" />
     <Compile Include="Utility\StringExtension.cs" />
   </ItemGroup>
   <ItemGroup>
