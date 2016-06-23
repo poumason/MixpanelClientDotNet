@@ -1,6 +1,6 @@
-﻿using Mixpanel.Net.Client.SDK;
-using Mixpanel.Net.Client.SDK.ServiceModel;
-using Mixpanel.Net.Client.Universal;
+﻿using MixpanelDotNet;
+using MixpanelDotNet.ServiceModel;
+using MixpanelDotNet.UWP;
 using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;

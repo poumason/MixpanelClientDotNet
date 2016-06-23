@@ -1,4 +1,4 @@
-## Mixpanel.NET.Client
+## MixpanelClientDotNet
 
 This project provides basic API integration for using Mixpanel from .NET
 applications.  

@@ -96,13 +96,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Library\Mixpanel.Net.Client\Mixpanel.Net.Client.SDK.csproj">
-      <Project>{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}</Project>
-      <Name>Mixpanel.Net.Client.SDK</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Mixpanel.Net.Client.WPF\Mixpanel.Net.Client.WPF.csproj">
+    <ProjectReference Include="..\..\Library\MixpanelClientDotNet.WPF\MixpanelClientDotNet.WPF.csproj">
       <Project>{1226ee3b-a393-4e09-ba00-504b31a476e3}</Project>
-      <Name>Mixpanel.Net.Client.WPF</Name>
+      <Name>MixpanelClientDotNet.WPF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Library\MixpanelClientDotNet\MixpanelClientDotNet.csproj">
+      <Project>{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}</Project>
+      <Name>MixpanelClientDotNet</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
