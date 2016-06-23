@@ -39,7 +39,7 @@ namespace MixpanelDotNet
             string queryString = $"data={eventitem.ToBase64()}";
             if (IsOpenIP)
             {
-                queryString += "&i=1";
+                queryString += "&ip=1";
             }
             if (NetworkTool.IsNetworkAvailable)
             {
