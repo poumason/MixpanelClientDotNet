@@ -235,5 +235,4 @@ _Pvt_Extensions
 *.appx
 *.aapxupload
 *.nupkg
-*.nuspec
 *.pfx

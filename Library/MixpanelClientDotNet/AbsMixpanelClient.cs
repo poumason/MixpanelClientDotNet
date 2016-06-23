@@ -18,6 +18,8 @@ namespace MixpanelDotNet
 
         private HttpService httpService;
 
+        public bool IsOpenIP { get; set; }
+
         protected INetworkHelper NetworkTool { get; set; }
 
         public AbsMixpanelClient(string token)
@@ -25,6 +27,7 @@ namespace MixpanelDotNet
             Token = token;
             httpService = new HttpService();
             TempEventCollection = new List<EventData>();
+            IsOpenIP = false;
         }
 
         /// <summary>
@@ -34,6 +37,10 @@ namespace MixpanelDotNet
         {
             eventitem.SetToken(Token);
             string queryString = $"data={eventitem.ToBase64()}";
+            if (IsOpenIP)
+            {
+                queryString += "&i=1";
+            }
             if (NetworkTool.IsNetworkAvailable)
             {
                 var task = httpService.SendRequest(CommonDefine.TRACK_URI, queryString);
