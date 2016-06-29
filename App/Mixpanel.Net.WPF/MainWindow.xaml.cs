@@ -46,7 +46,7 @@ namespace Mixpanel.Net.WPF
         private void Timer_Tick(object sender, object e)
         {
             timer.Stop();
-            client.TrackEvent(new EventData()
+            var task = client.TrackEvent(new EventData()
             {
                 Name = "test_wpf"
             });
