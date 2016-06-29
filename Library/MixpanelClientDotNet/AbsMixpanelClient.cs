@@ -33,7 +33,7 @@ namespace MixpanelDotNet
         /// <summary>
         /// Track event.
         /// </summary>
-        public void TrackEvent(EventData eventitem)
+        public async Task TrackEvent(EventData eventitem)
         {
             eventitem.SetToken(Token);
             string queryString = $"data={eventitem.ToBase64()}";
@@ -43,7 +43,7 @@ namespace MixpanelDotNet
             }
             if (NetworkTool.IsNetworkAvailable)
             {
-                var task = httpService.SendRequest(CommonDefine.TRACK_URI, queryString);
+                var task = await httpService.SendRequest(CommonDefine.TRACK_URI, queryString);
             }
             else
             {

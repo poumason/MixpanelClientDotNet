@@ -6,7 +6,7 @@ namespace MixpanelDotNet
 {
     public interface IMixpanelClient
     {
-        void TrackEvent(EventData eventItem);
+        Task TrackEvent(EventData eventItem);
 
         Task<bool> ImportEvents(List<EventData> eventList);
 
