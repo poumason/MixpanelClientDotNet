@@ -236,3 +236,4 @@ _Pvt_Extensions
 *.aapxupload
 *.nupkg
 *.pfx
+/Library/MixpanelClientDotNet.UWP/nuget.exe
