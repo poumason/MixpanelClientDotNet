@@ -1,13 +1,12 @@
-﻿using System;
-using System.Threading.Tasks;
-using Windows.UI.Xaml;
-using Windows.Storage;
-using System.Collections.Generic;
-using MixpanelDotNet.UWP.Utility;
+﻿using MixpanelDotNet.IO;
 using MixpanelDotNet.ServiceModel;
-using MixpanelDotNet.UWP.IO;
+using MixpanelDotNet.Utility;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Windows.Storage;
 
-namespace MixpanelDotNet.UWP
+namespace MixpanelDotNet
 {
     public class MixpanelClient : AbsMixpanelClient
     {

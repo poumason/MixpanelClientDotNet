@@ -1,5 +1,4 @@
 ﻿using MixpanelDotNet;
-using MixpanelDotNet.UWP;
 using System;
 using System.Collections.Generic;
 using System.IO;

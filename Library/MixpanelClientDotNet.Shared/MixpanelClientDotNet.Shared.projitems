@@ -3,10 +3,10 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>19180fae-1ed7-4571-93f9-d5196a6759a8</SharedGUID>
+    <SharedGUID>baec1713-f341-41a9-be4f-016370a86942</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>MixpanelClientDotNet</Import_RootNamespace>
+    <Import_RootNamespace>MixpanelClientDotNet.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)AbsMixpanelClient.cs" />
