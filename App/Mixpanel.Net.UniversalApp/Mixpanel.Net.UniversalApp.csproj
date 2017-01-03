@@ -130,10 +130,6 @@
       <Project>{628b4e7b-ba3b-4015-96ec-f1a634ab90ab}</Project>
       <Name>MixpanelClientDotNet.UWP</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Library\MixpanelClientDotNet\MixpanelClientDotNet.csproj">
-      <Project>{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}</Project>
-      <Name>MixpanelClientDotNet</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

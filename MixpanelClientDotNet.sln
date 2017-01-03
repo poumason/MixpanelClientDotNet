@@ -13,13 +13,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mixpanel.Net.UniversalApp",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mixpanel.Net.WPF", "App\Mixpanel.Net.WPF\Mixpanel.Net.WPF.csproj", "{4F1E9E18-A565-42BD-9FEE-077D4FE48A3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MixpanelClientDotNet", "Library\MixpanelClientDotNet\MixpanelClientDotNet.csproj", "{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MixpanelClientDotNet.UWP", "Library\MixpanelClientDotNet.UWP\MixpanelClientDotNet.UWP.csproj", "{628B4E7B-BA3B-4015-96EC-F1A634AB90AB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MixpanelClientDotNet.WPF", "Library\MixpanelClientDotNet.WPF\MixpanelClientDotNet.WPF.csproj", "{1226EE3B-A393-4E09-BA00-504B31A476E3}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MixpanelClientDotNet", "MixpanelClientDotNet\MixpanelClientDotNet.shproj", "{19180FAE-1ED7-4571-93F9-D5196A6759A8}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		MixpanelClientDotNet\MixpanelClientDotNet.projitems*{1226ee3b-a393-4e09-ba00-504b31a476e3}*SharedItemsImports = 4
+		MixpanelClientDotNet\MixpanelClientDotNet.projitems*{19180fae-1ed7-4571-93f9-d5196a6759a8}*SharedItemsImports = 13
+		MixpanelClientDotNet\MixpanelClientDotNet.projitems*{628b4e7b-ba3b-4015-96ec-f1a634ab90ab}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
@@ -67,20 +72,6 @@ Global
 		{4F1E9E18-A565-42BD-9FEE-077D4FE48A3E}.Release|x64.Build.0 = Release|Any CPU
 		{4F1E9E18-A565-42BD-9FEE-077D4FE48A3E}.Release|x86.ActiveCfg = Release|Any CPU
 		{4F1E9E18-A565-42BD-9FEE-077D4FE48A3E}.Release|x86.Build.0 = Release|Any CPU
-		{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}.Debug|ARM.ActiveCfg = Debug|ARM
-		{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}.Debug|ARM.Build.0 = Debug|ARM
-		{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}.Debug|x64.ActiveCfg = Debug|x64
-		{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}.Debug|x64.Build.0 = Debug|x64
-		{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}.Debug|x86.ActiveCfg = Debug|x86
-		{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}.Debug|x86.Build.0 = Debug|x86
-		{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}.Release|Any CPU.ActiveCfg = Release|x86
-		{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}.Release|ARM.ActiveCfg = Release|ARM
-		{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}.Release|ARM.Build.0 = Release|ARM
-		{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}.Release|x64.ActiveCfg = Release|x64
-		{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}.Release|x64.Build.0 = Release|x64
-		{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}.Release|x86.ActiveCfg = Release|x86
-		{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}.Release|x86.Build.0 = Release|x86
 		{628B4E7B-BA3B-4015-96EC-F1A634AB90AB}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{628B4E7B-BA3B-4015-96EC-F1A634AB90AB}.Debug|ARM.ActiveCfg = Debug|ARM
 		{628B4E7B-BA3B-4015-96EC-F1A634AB90AB}.Debug|ARM.Build.0 = Debug|ARM
@@ -118,8 +109,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{FB93FBF0-EF1B-490E-B2B7-B164583CF808} = {21862395-45C8-4E13-9890-93F04CBA41F7}
 		{4F1E9E18-A565-42BD-9FEE-077D4FE48A3E} = {21862395-45C8-4E13-9890-93F04CBA41F7}
-		{96765FFA-1F88-4B82-A30C-4FDF1B38CC49} = {A44A0F23-E2BD-4444-BF4D-531A7D656404}
 		{628B4E7B-BA3B-4015-96EC-F1A634AB90AB} = {A44A0F23-E2BD-4444-BF4D-531A7D656404}
 		{1226EE3B-A393-4E09-BA00-504B31A476E3} = {A44A0F23-E2BD-4444-BF4D-531A7D656404}
+		{19180FAE-1ED7-4571-93F9-D5196A6759A8} = {A44A0F23-E2BD-4444-BF4D-531A7D656404}
 	EndGlobalSection
 EndGlobal

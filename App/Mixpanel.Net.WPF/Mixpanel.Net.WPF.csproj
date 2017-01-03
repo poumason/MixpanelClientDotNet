@@ -100,10 +100,6 @@
       <Project>{1226ee3b-a393-4e09-ba00-504b31a476e3}</Project>
       <Name>MixpanelClientDotNet.WPF</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Library\MixpanelClientDotNet\MixpanelClientDotNet.csproj">
-      <Project>{96765FFA-1F88-4B82-A30C-4FDF1B38CC49}</Project>
-      <Name>MixpanelClientDotNet</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

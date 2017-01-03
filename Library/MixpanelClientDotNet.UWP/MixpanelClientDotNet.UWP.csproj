@@ -100,13 +100,8 @@
       <Name>Windows Mobile Extensions for the UWP</Name>
     </SDKReference>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MixpanelClientDotNet\MixpanelClientDotNet.csproj">
-      <Project>{96765ffa-1f88-4b82-a30c-4fdf1b38cc49}</Project>
-      <Name>MixpanelClientDotNet</Name>
-    </ProjectReference>
-  </ItemGroup>
   <ItemGroup />
+  <Import Project="..\..\MixpanelClientDotNet\MixpanelClientDotNet.projitems" Label="Shared" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

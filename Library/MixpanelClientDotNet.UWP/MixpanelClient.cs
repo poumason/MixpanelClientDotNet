@@ -15,21 +15,12 @@ namespace MixpanelDotNet.UWP
 
         public MixpanelClient(string token) : base(token)
         {
-            Application.Current.Suspending += Current_Suspending;
             NetworkTool = new NetworkHelper();
         }
 
         public override Task<bool> ImportEvents(List<EventData> eventList)
         {
             throw new NotImplementedException();
-        }
-
-        private async void Current_Suspending(object sender, Windows.ApplicationModel.SuspendingEventArgs e)
-        {
-            var deferral = e.SuspendingOperation.GetDeferral();
-            //TODO: Save application state and stop any background activity
-            await SaveMixpanelTempData();
-            deferral.Complete();
         }
 
         protected override async Task<string> ReadFile()
