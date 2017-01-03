@@ -1,6 +1,5 @@
 ﻿using MixpanelDotNet;
 using MixpanelDotNet.ServiceModel;
-using MixpanelDotNet.UWP;
 using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -14,8 +13,6 @@ namespace Mixpanel.Net.UniversalApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private IMixpanelClient client;
-
         private DispatcherTimer timer;
 
         public MainPage()
@@ -23,9 +20,6 @@ namespace Mixpanel.Net.UniversalApp
             this.InitializeComponent();
             Loaded += MainPage_Loaded;
             Unloaded += MainPage_Unloaded;
-
-            // get mixpanel project token
-            client = new MixpanelClient("");
         }
 
         private void MainPage_Unloaded(object sender, RoutedEventArgs e)
@@ -44,7 +38,7 @@ namespace Mixpanel.Net.UniversalApp
         private void Timer_Tick(object sender, object e)
         {
             timer.Stop();
-            client.TrackEvent(new EventData()
+            App.MixpanelClient.TrackEvent(new EventData()
             {
                 Name = "test_uwp"
             });
@@ -58,7 +52,7 @@ namespace Mixpanel.Net.UniversalApp
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            await client.SaveMixpanelTempData();
+            await App.MixpanelClient.SaveMixpanelTempData();
         }
     }
 }

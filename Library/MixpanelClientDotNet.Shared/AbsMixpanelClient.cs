@@ -33,28 +33,33 @@ namespace MixpanelDotNet
         /// <summary>
         /// Track event.
         /// </summary>
-        public void TrackEvent(EventData eventitem)
+        public void TrackEvent(EventData eventItem)
         {
-            eventitem.SetToken(Token);
-            string queryString = $"data={eventitem.ToBase64()}";
+            eventItem.SetToken(Token);
+            string queryString = $"data={eventItem.ToBase64()}";
+
             if (IsOpenIP)
             {
                 queryString += "&ip=1";
             }
+
             if (NetworkTool.IsNetworkAvailable)
             {
                 var task = httpService.SendRequest(CommonDefine.TRACK_URI, queryString);
             }
             else
             {
-                TempEventCollection.Add(eventitem);
+                TempEventCollection.Add(eventItem);
             }
         }
-
+        
         /// <summary>
         /// Import more events. (over 5 days).
         /// </summary>
-        public abstract Task<bool> ImportEvents(List<EventData> eventList);
+        public virtual Task<bool> ImportEvents(List<EventData> eventList)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Save cache Track events.

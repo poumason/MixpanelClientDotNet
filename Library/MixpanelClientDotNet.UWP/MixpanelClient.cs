@@ -1,13 +1,12 @@
-﻿using System;
-using System.Threading.Tasks;
-using Windows.UI.Xaml;
-using Windows.Storage;
-using System.Collections.Generic;
-using MixpanelDotNet.UWP.Utility;
+﻿using MixpanelDotNet.IO;
 using MixpanelDotNet.ServiceModel;
-using MixpanelDotNet.UWP.IO;
+using MixpanelDotNet.Utility;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Windows.Storage;
 
-namespace MixpanelDotNet.UWP
+namespace MixpanelDotNet
 {
     public class MixpanelClient : AbsMixpanelClient
     {
@@ -15,21 +14,12 @@ namespace MixpanelDotNet.UWP
 
         public MixpanelClient(string token) : base(token)
         {
-            Application.Current.Suspending += Current_Suspending;
             NetworkTool = new NetworkHelper();
         }
 
         public override Task<bool> ImportEvents(List<EventData> eventList)
         {
             throw new NotImplementedException();
-        }
-
-        private async void Current_Suspending(object sender, Windows.ApplicationModel.SuspendingEventArgs e)
-        {
-            var deferral = e.SuspendingOperation.GetDeferral();
-            //TODO: Save application state and stop any background activity
-            await SaveMixpanelTempData();
-            deferral.Complete();
         }
 
         protected override async Task<string> ReadFile()

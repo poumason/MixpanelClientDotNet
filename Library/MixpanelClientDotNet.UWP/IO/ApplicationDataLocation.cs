@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MixpanelDotNet.UWP.IO
+namespace MixpanelDotNet.IO
 {
     public enum ApplicationDataLocation
     {

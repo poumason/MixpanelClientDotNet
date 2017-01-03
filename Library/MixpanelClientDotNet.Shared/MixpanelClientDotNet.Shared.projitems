@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>baec1713-f341-41a9-be4f-016370a86942</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MixpanelClientDotNet.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AbsMixpanelClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IMixpanelClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ServiceModel\Model\EventData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ServiceModel\Model\EventDataCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ServiceModel\Parameter\EventParameter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ServiceModel\Parameter\IParameter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ServiceModel\Services\HttpService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utility\CommonDefine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utility\DebugLogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utility\INetworkHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utility\StringExtension.cs" />
+  </ItemGroup>
+</Project>

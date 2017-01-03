@@ -9,7 +9,7 @@ using Windows.Storage.Provider;
 using Windows.Storage.Search;
 using Windows.Storage.Streams;
 
-namespace MixpanelDotNet.UWP.IO
+namespace MixpanelDotNet.IO
 {
     public static class StorageHelper
     {

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Windows.Networking.Connectivity;
 
-namespace MixpanelDotNet.UWP.Utility
+namespace MixpanelDotNet.Utility
 {
     public class NetworkHelper : INetworkHelper, IDisposable
     {
